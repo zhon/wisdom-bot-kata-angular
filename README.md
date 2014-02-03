@@ -8,7 +8,7 @@ Setup
 
 You will need [ node/npm ]( http://nodejs.org/ ) and [ git ]( http://git-scm.com/ ) installed.
 
-You will also need [ Chrome ]( https://www.google.com/intl/en/chrome/browser/ ) or [ Firefox ]( http://www.mozilla.org/en-US/firefox/new/ ) will work with a bit of configuration.
+You will also need [ Chrome ]( https://www.google.com/intl/en/chrome/browser/ ) (or [ Firefox ]( http://www.mozilla.org/en-US/firefox/new/ ) will work with a bit of configuration).
 
 ```bash
 git clone https://github.com/zhon/wisdom-bot-kata-angular.git
