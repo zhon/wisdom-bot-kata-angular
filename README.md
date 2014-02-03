@@ -1,10 +1,10 @@
 Wisdom Sharing Bot Kata
------------------------
+=======================
 
 Kata for learning mockist/interaction/London style TDD in AngularJS
 
 Setup
-=====
+-----
 
 You will need [ node/npm ]( http://nodejs.org/ ) and [ git ]( http://git-scm.com/ ) installed.
 

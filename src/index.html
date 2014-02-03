@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
+
+    <% scripts.forEach( function ( file ) { %>
+    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+  </head>
+
+  <body>
+    <header class="navbar navbar-default navbar-static-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+              <span class="fa fa-bars fa-lg"></span>
+            </button>
+            <a class="navbar-brand" href="#">Wisdom</a>
+          </div>
+          <div class="navbar-collapse collapse" ng-class="!navCollapsed && 'in'">
+            <ul class="nav navbar-nav">
+              <li ui-route="/sales" ng-class="{active:$uiRoute}">
+              <a href="#/home">
+                <i class="fa fa-home"></i>
+                Home
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container" ui-view="main"></div>
+
+    <footer class="footer">
+      <div class="container">
+      </div>
+    </footer>
+  </body>
+</html>
