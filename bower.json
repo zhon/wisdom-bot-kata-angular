@@ -1,0 +1,15 @@
+{
+  "name": "wisdom-bot",
+  "version": "0.0.1",
+  "devDependencies": {
+    "angular": "~1.2.11",
+    "angular-mocks": "~1.2.11",
+    "bootstrap": "~3.0.3",
+    "angular-bootstrap": "~0.10.0",
+    "angular-ui-router": "0.2.7",
+    "angular-ui-utils": "~0.1.0",
+    "sinon": "~1.7.3",
+    "underscore": "~1.5.2"
+  },
+  "dependencies": {}
+}
