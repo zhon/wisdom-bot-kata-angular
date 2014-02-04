@@ -8,7 +8,7 @@ Setup
 
 You will need [ node/npm ]( http://nodejs.org/ ) and [ git ]( http://git-scm.com/ ) installed.
 
-You will also need [ Chrome ]( https://www.google.com/intl/en/chrome/browser/ ) ([ Firefox ]( http://www.mozilla.org/en-US/firefox/new/ ) will work with a bit of configuration).
+You will also need [Chrome]( https://www.google.com/intl/en/chrome/browser/ ) ([Firefox]( http://www.mozilla.org/en-US/firefox/new/ ) will work with a bit of configuration).
 
 ```bash
 git clone https://github.com/zhon/wisdom-bot-kata-angular.git
@@ -60,10 +60,9 @@ Why not automate it? | I will, just not in this Kata.
 Starting
 --------
 
-| | |
-| --- | --- |
-| How do you write _hello world_? | In ``src/app/home`` I write
+What is the test for _Hello World_? | Check the browser for _hello_ as _world_ will change.
 
+In ``src/app/home`` I write
 ```html
 Hello World!
 ```
