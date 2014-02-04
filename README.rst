@@ -65,37 +65,38 @@ Introduction
 Starting
 --------
 
-  +-------------------------------------+-----------------------------------------------------+
-  | What is the test for *Hello World*? | Check the webpage ``build/index.html`` for "Hello". |
-  +-------------------------------------+-----------------------------------------------------+
-  | It is time to write *Hello World*.  | In ``src/app/home/home.tpl.html`` I write           |
-  |                                     |                                                     |
-  |                                     | .. code:: html                                      |
-  |                                     |                                                     |
-  |                                     |     Hello World!                                    |
-  |                                     |                                                     |
-  +-------------------------------------+-----------------------------------------------------+
-  | "World" shouln't be hard coded.     | ``src/app/home/home.tpl.html``                      |
-  |                                     |                                                     |
-  |                                     | .. code:: html                                      |
-  |                                     |                                                     |
-  |                                     | Hello {{user}}!                                     |
-  |                                     |                                                     |
-  |                                     | ``src/app/home/home.js``                            |
-  |                                     |                                                     |
-  |                                     | .. code:: js                                        |
-  |                                     |                                                     |
-  |                                     |   .controller( 'HomeCtrl', function ( $scope ) {    |
-  |                                     |                                                     |
-  |                                     |     $scope.user = 'World';                          |
-  |                                     |                                                     |
-  |                                     |   })                                                |
-  |                                     |                                                     |
-  +-------------------------------------+-----------------------------------------------------+
++-------------------------------------+-----------------------------------------------------+
+| What is the test for *Hello World*? | Check the webpage ``build/index.html`` for "Hello". |
++-------------------------------------+-----------------------------------------------------+
+| It is time to write *Hello World*.  | In ``src/app/home/home.tpl.html`` I write           |
+|                                     |                                                     |
+|                                     | .. code:: html                                      |
+|                                     |                                                     |
+|                                     |     Hello World!                                    |
+|                                     |                                                     |
++-------------------------------------+-----------------------------------------------------+
+| "World" shouln't be hard coded.     | ``src/app/home/home.tpl.html``                      |
+|                                     |                                                     |
+|                                     | .. code:: html                                      |
+|                                     |                                                     |
+|                                     | Hello {{user}}!                                     |
+|                                     |                                                     |
+|                                     | ``src/app/home/home.js``                            |
+|                                     |                                                     |
+|                                     | .. code:: js                                        |
+|                                     |                                                     |
+|                                     |   .controller( 'HomeCtrl', function ( $scope ) {    |
+|                                     |                                                     |
+|                                     |     $scope.user = 'World';                          |
+|                                     |                                                     |
+|                                     |   })                                                |
+|                                     |                                                     |
++-------------------------------------+-----------------------------------------------------+
 
 
 
 ----
+
 .. _node/npm: http://nodejs.org/
 .. _git: http://git-scm.com/
 .. _Chrome: https://www.google.com/intl/en/chrome/browser/
