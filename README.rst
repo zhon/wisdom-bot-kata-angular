@@ -6,66 +6,81 @@ Kata for learning mockist/interaction/London style TDD in AngularJS
 Setup
 -----
 
-You will need [ node/npm ]( http://nodejs.org/ ) and [ git ]( http://git-scm.com/ ) installed.
+You will need `node/npm`_ and `git`_ installed.
 
-You will also need [Chrome]( https://www.google.com/intl/en/chrome/browser/ ) ([Firefox]( http://www.mozilla.org/en-US/firefox/new/ ) will work with a bit of configuration).
+You will also need `Chrome`_ (`Firefox`_ will work with a bit of
+configuration).
 
-```bash
-git clone https://github.com/zhon/wisdom-bot-kata-angular.git
+.. code:: bash
 
-cd wisdom-bot-kata-angular/
-```
+    git clone https://github.com/zhon/wisdom-bot-kata-angular.git
 
-[ Grunt ]( http://gruntjs.com/ ), [ karma ]( https://github.com/karma-runner/karma ) and [ bower ]( https://github.com/bower/bower ) should be installed globally:
+    cd wisdom-bot-kata-angular/
 
+`Grunt`_, `karma`_ and `bower`_ should be installed globally:
 
-```bash
-npm -g install grunt-cli karma bower
-```
+.. code:: bash
+
+    npm -g install grunt-cli karma bower
 
 The rest locally:
 
-```bash
-npm install
-bower install
-```
+.. code:: bash
+
+    npm install
+    bower install
 
 You will be editing ``src/app/home/``
 
 To run the tests and the build
 
-```bash
-grunt watch
-```
-To view your work load ``wisdom-bot-kata-angular/build/index.html`` into your browser.
+.. code:: bash
 
-For more information take a look at the [ seed project ]( https://github.com/ngbp/ngbp/tree/v0.3.1-release )
+    grunt watch
 
-Finish your __setup__ by calling
+To view your work load ``wisdom-bot-kata-angular/build/index.html`` into
+your browser.
 
-```bash
-git checkout setup
-```
+For more information take a look at the `seed project`_
+
+Finish your **setup** by calling
+
+.. code:: bash
+
+    git checkout setup
 
 Introduction
 ------------
 
-| | |
-| --- | --- |
-I hear you want to try Mockist style TDD. | I do! I do!
-What do you want to build? | A wisdom sharing bot in AngularJS. 
-We start by writing an acceptance test. | Yes and for now they will be manual.
-Why not automate it? | I will, just not in this Kata.
++---------------------------------------------+----------------------------------------+
+| I hear you want to try Mockist style TDD.   | I do! I do!                            |
++---------------------------------------------+----------------------------------------+
+| What do you want to build?                  | A wisdom sharing bot in AngularJS.     |
++---------------------------------------------+----------------------------------------+
+| We start by writing an acceptance test.     | Yes and for now they will be manual.   |
++---------------------------------------------+----------------------------------------+
+| Why not automate it?                        | I will, just not in this Kata.         |
++---------------------------------------------+----------------------------------------+
 
 Starting
 --------
 
-What is the test for _Hello World_? | Check the browser for _hello_ as _world_ will change.
+What is the test for *Hello World*? \| Check the browser for *hello* as
+*world* will change.
 
 In ``src/app/home`` I write
-```html
-Hello World!
-```
 
+.. code:: html
 
+    Hello World!
 
+----
+
+.. _node/npm: http://nodejs.org/
+.. _git: http://git-scm.com/
+.. _Chrome: https://www.google.com/intl/en/chrome/browser/
+.. _Firefox: http://www.mozilla.org/en-US/firefox/new/
+.. _Grunt: http://gruntjs.com/
+.. _karma: https://github.com/karma-runner/karma
+.. _bower: https://github.com/bower/bower
+.. _seed project: https://github.com/ngbp/ngbp/tree/v0.3.1-release
