@@ -50,6 +50,7 @@ git checkout setup
 Introduction
 ------------
 
+ | 
 --- | ---
 I hear you want to try Mockist style TDD. | I do! I do!
 What do you want to build? | A wisdom sharing bot in AngularJS. 
