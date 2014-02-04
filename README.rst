@@ -65,14 +65,14 @@ Introduction
 Starting
 --------
 
-What is the test for *Hello World*? \| Check the browser for *hello* as
-*world* will change.
-
-In ``src/app/home`` I write
-
-.. code:: html
-
-    Hello World!
++---------------------------------------------+----------------------------------------+
+| What is the test for *Hello World*? | Check the browser for *Hello* as *world* will change. |
++---------------------------------------------+----------------------------------------+
+It is time to write *Hello World*.  | In ``src/app/home`` I write
+                                    | .. code:: html
+                                    |
+                                    |     Hello World!
++---------------------------------------------+----------------------------------------+
 
 ----
 
