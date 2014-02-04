@@ -8,7 +8,7 @@ Setup
 
 You will need [ node/npm ]( http://nodejs.org/ ) and [ git ]( http://git-scm.com/ ) installed.
 
-You will also need [ Chrome ]( https://www.google.com/intl/en/chrome/browser/ ) (or [ Firefox ]( http://www.mozilla.org/en-US/firefox/new/ ) will work with a bit of configuration).
+You will also need [ Chrome ]( https://www.google.com/intl/en/chrome/browser/ ) ([ Firefox ]( http://www.mozilla.org/en-US/firefox/new/ ) will work with a bit of configuration).
 
 ```bash
 git clone https://github.com/zhon/wisdom-bot-kata-angular.git
@@ -30,13 +30,19 @@ npm install
 bower install
 ```
 
-Start editing ``index.html``
+You will be editing ``src/app/home/``
+
+To run the tests and the build
 
 ```bash
 grunt watch
 ```
-
-will run your tests automatically.
+To view your work load ``wisdom-bot-kata-angular/build/index.html`` into your browser.
 
 For more information take a look at the [ seed project ]( https://github.com/ngbp/ngbp/tree/v0.3.1-release )
 
+Finish your __setup__ by calling
+
+```bash
+git checkout setup
+```
