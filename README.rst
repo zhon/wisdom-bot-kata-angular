@@ -79,7 +79,7 @@ Starting
 |                                     |                                                     |
 |                                     | .. code:: html                                      |
 |                                     |                                                     |
-|                                     | Hello {{user}}!                                     |
+|                                     |   Hello {{user}}!                                   |
 |                                     |                                                     |
 |                                     | ``src/app/home/home.js``                            |
 |                                     |                                                     |
