@@ -50,9 +50,15 @@ git checkout setup
 Introduction
 ------------
 
-| I hear you want to try Mockist style TDD. | I do! I do! |
-| What do you want to build? | A wisdom sharing bot in AngularJS. |
-| We start by writing an acceptance test. | Yes and for now it will be manual. |
-| Why not automate it? | I will, just not in this Kata. |
+I hear you want to try Mockist style TDD. | I do! I do!
+--- | ---
+What do you want to build? | A wisdom sharing bot in AngularJS. 
+We start by writing an acceptance test. | Yes and for now it will be manual.
+Why not automate it? | I will, just not in this Kata.
+
+Starting
+--------
+
+
 
 
