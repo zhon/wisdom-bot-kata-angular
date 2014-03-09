@@ -75,7 +75,9 @@ Starting
 |                                     |     Hello World!                                    |
 |                                     |                                                     |
 +-------------------------------------+-----------------------------------------------------+
-| "World" shouln't be hard coded.     | ``src/app/home/home.tpl.html``                      |
+| Should't "World" be a variable?     | Sure! I can do that with simple scope binding:      |
+|                                     |                                                     |
+|                                     |  ``src/app/home/home.tpl.html``                     |
 |                                     |                                                     |
 |                                     | .. code:: html                                      |
 |                                     |                                                     |
@@ -91,6 +93,10 @@ Starting
 |                                     |                                                     |
 |                                     |   })                                                |
 |                                     |                                                     |
++-------------------------------------+-----------------------------------------------------+
+| You didn't write a test and this is | I don't write tests for simple scope bindings. They |
+|                                     | couldn't possibly break.                            |
+| a TDD kata.                         |                                                     |
 +-------------------------------------+-----------------------------------------------------+
 
 
