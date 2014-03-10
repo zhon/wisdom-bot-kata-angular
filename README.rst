@@ -77,26 +77,24 @@ Starting
 +-------------------------------------+-----------------------------------------------------+
 | Should't "World" be a variable?     | Sure! I can do that with simple scope binding:      |
 |                                     |                                                     |
-|                                     |  ``src/app/home/home.tpl.html``                     |
+|                                     | ``src/app/home/home.tpl.html``                      |
 |                                     |                                                     |
 |                                     | .. code:: html                                      |
 |                                     |                                                     |
 |                                     |   Hello {{user}}!                                   |
+|                                     |                                                     |
 |                                     |                                                     |
 |                                     | ``src/app/home/home.js``                            |
 |                                     |                                                     |
 |                                     | .. code:: js                                        |
 |                                     |                                                     |
 |                                     |   .controller( 'HomeCtrl', function ( $scope ) {    |
-|                                     |                                                     |
 |                                     |     $scope.user = 'World';                          |
-|                                     |                                                     |
 |                                     |   })                                                |
 |                                     |                                                     |
 +-------------------------------------+-----------------------------------------------------+
 | You didn't write a test and this is | I don't write tests for simple scope bindings. They |
-|                                     | couldn't possibly break.                            |
-| a TDD kata.                         |                                                     |
+| a TDD kata.                         | couldn't possibly break.                            |
 +-------------------------------------+-----------------------------------------------------+
 
 
