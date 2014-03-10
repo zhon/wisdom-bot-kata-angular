@@ -65,84 +65,84 @@ Introduction
 Starting
 --------
 
- +-------------------------------------+---------------------------------------------------------------+
- | What is the test for *Hello World*? | Check the webpage ``build/index.html`` for "Hello".           |
- +-------------------------------------+---------------------------------------------------------------+
- | It is time to write *Hello World*.  | In ``src/app/home/home.tpl.html`` I write                     |
- |                                     |                                                               |
- |                                     | .. code:: html                                                |
- |                                     |                                                               |
- |                                     |     Hello World!                                              |
- |                                     |                                                               |
- +-------------------------------------+---------------------------------------------------------------+
- | Should't "World" be a variable?     | Sure! I can do that with simple scope binding:                |
- |                                     |                                                               |
- |                                     | ``src/app/home/home.tpl.html``                                |
- |                                     |                                                               |
- |                                     | .. code:: html                                                |
- |                                     |                                                               |
- |                                     |   Hello {{user}}!                                             |
- |                                     |                                                               |
- |                                     |                                                               |
- |                                     | ``src/app/home/home.js``                                      |
- |                                     |                                                               |
- |                                     | .. code:: js                                                  |
- |                                     |                                                               |
- |                                     |   .controller( 'HomeCtrl', function ( $scope ) {              |
- |                                     |     $scope.user = 'World';                                    |
- |                                     |   })                                                          |
- |                                     |                                                               |
- +-------------------------------------+---------------------------------------------------------------+
- | You didn't write a test and this is | I don't write tests for simple scope bindings. They           |
- | a TDD kata.                         | couldn't possibly break.                                      |
- +-------------------------------------+---------------------------------------------------------------+
- | How are we going to get the user?   | The user will be entered in a form                            |
- |                                     |                                                               |
- |                                     |  ``src/app/home/home.tpl.html``                               |
- |                                     |                                                               |
- |                                     | .. code:: html                                                |
- |                                     |                                                               |
- |                                     |     <form>                                                    |
- |                                     |       <label>Name:</label>                                    |
- |                                     |       <input ng-model="username" />                           |
- |                                     |     </form>                                                   |
- |                                     |     <hr/>                                                     |
- +-------------------------------------+---------------------------------------------------------------+
- | We need to input our message.       | We will just **change** the form a little to get both the     |
- |                                     | username and message.                                         |
- |                                     |                                                               |
- |                                     | .. code:: html                                                |
- |                                     |                                                               |
- |                                     |     <form>                                                    |
- |                                     |       <label>Name:</label>                                    |
- |                                     |       <input ng-model="message.username" />                   |
- |                                     |       <br />                                                  |
- |                                     |       <label>Message:</label>                                 |
- |                                     |       <input ng-model="message.text" />                       |
- |                                     |     </form>                                                   |
- |                                     |     <hr/>                                                     |
- |                                     |                                                               |
- |                                     | And to see it we will **replace** ``Hello {{username}}`` with |
- |                                     |                                                               |
- |                                     | .. code:: html                                                |
- |                                     |                                                               |
- |                                     |  <div class='chat-area'>                                      |
- |                                     |    <ul>                                                       |
- |                                     |     <li>                                                      |
- |                                     |      <span class='username'>                                  |
- |                                     |        {{message.username}}                                   |
- |                                     |      </span>                                                  |
- |                                     |      <span class='message'>                                   |
- |                                     |          {{message.text}}                                     |
- |                                     |        </span>                                                |
- |                                     |      </li>                                                    |
- |                                     |    </ul>                                                      |
- |                                     |  </div>                                                       |
- +-------------------------------------+---------------------------------------------------------------+
++-------------------------------------+---------------------------------------------------------------+
+| What is the test for *Hello World*? | Check the webpage ``build/index.html`` for "Hello".           |
++-------------------------------------+---------------------------------------------------------------+
+| It is time to write *Hello World*.  | In ``src/app/home/home.tpl.html`` I write                     |
+|                                     |                                                               |
+|                                     | .. code:: html                                                |
+|                                     |                                                               |
+|                                     |     Hello World!                                              |
+|                                     |                                                               |
++-------------------------------------+---------------------------------------------------------------+
+| Should't "World" be a variable?     | Sure! I can do that with simple scope binding:                |
+|                                     |                                                               |
+|                                     | ``src/app/home/home.tpl.html``                                |
+|                                     |                                                               |
+|                                     | .. code:: html                                                |
+|                                     |                                                               |
+|                                     |   Hello {{user}}!                                             |
+|                                     |                                                               |
+|                                     |                                                               |
+|                                     | ``src/app/home/home.js``                                      |
+|                                     |                                                               |
+|                                     | .. code:: js                                                  |
+|                                     |                                                               |
+|                                     |   .controller( 'HomeCtrl', function ( $scope ) {              |
+|                                     |     $scope.user = 'World';                                    |
+|                                     |   })                                                          |
+|                                     |                                                               |
++-------------------------------------+---------------------------------------------------------------+
+| You didn't write a test and this is | I don't write tests for simple scope bindings. They           |
+| a TDD kata.                         | couldn't possibly break.                                      |
++-------------------------------------+---------------------------------------------------------------+
+| How are we going to get the user?   | The user will be entered in a form                            |
+|                                     |                                                               |
+|                                     |  ``src/app/home/home.tpl.html``                               |
+|                                     |                                                               |
+|                                     | .. code:: html                                                |
+|                                     |                                                               |
+|                                     |     <form>                                                    |
+|                                     |       <label>Name:</label>                                    |
+|                                     |       <input ng-model="username" />                           |
+|                                     |     </form>                                                   |
+|                                     |     <hr/>                                                     |
++-------------------------------------+---------------------------------------------------------------+
+| We need to input our message.       | We will just **change** the form a little to get both the     |
+|                                     | username and message.                                         |
+|                                     |                                                               |
+|                                     | .. code:: html                                                |
+|                                     |                                                               |
+|                                     |     <form>                                                    |
+|                                     |       <label>Name:</label>                                    |
+|                                     |       <input ng-model="message.username" />                   |
+|                                     |       <br />                                                  |
+|                                     |       <label>Message:</label>                                 |
+|                                     |       <input ng-model="message.text" />                       |
+|                                     |     </form>                                                   |
+|                                     |     <hr/>                                                     |
+|                                     |                                                               |
+|                                     | And to see it we will **replace** ``Hello {{username}}`` with |
+|                                     |                                                               |
+|                                     | .. code:: html                                                |
+|                                     |                                                               |
+|                                     |  <div class='chat-area'>                                      |
+|                                     |    <ul>                                                       |
+|                                     |     <li>                                                      |
+|                                     |      <span class='username'>                                  |
+|                                     |        {{message.username}}                                   |
+|                                     |      </span>                                                  |
+|                                     |      <span class='message'>                                   |
+|                                     |          {{message.text}}                                     |
+|                                     |        </span>                                                |
+|                                     |      </li>                                                    |
+|                                     |    </ul>                                                      |
+|                                     |  </div>                                                       |
++-------------------------------------+---------------------------------------------------------------+
 
-  +--+----------------------------+
-  |  |                            |
-  +--+----------------------------+
++--+----------------------------+
+|  |                            |
++--+----------------------------+
 
 
 
