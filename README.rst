@@ -111,6 +111,8 @@ Starting
 | We need to input our message.       | We will just **change** the form a little to get both the     |
 |                                     | username and message.                                         |
 |                                     |                                                               |
+|                                     | ``src/app/chatroom/chatroom.tpl.html``                        |
+|                                     |                                                               |
 |                                     | .. code:: html                                                |
 |                                     |                                                               |
 |                                     |     <form>                                                    |
@@ -123,6 +125,8 @@ Starting
 |                                     |     <hr/>                                                     |
 |                                     |                                                               |
 |                                     | And to see it we will **replace** ``Hello {{username}}`` with |
+|                                     |                                                               |
+|                                     | ``src/app/chatroom/chatroom.tpl.html``                        |
 |                                     |                                                               |
 |                                     | .. code:: html                                                |
 |                                     |                                                               |
@@ -143,15 +147,52 @@ Starting
 Test: Message is Saved
 ----------------------
 
-+-------------------------------------+-------------------------------------------------------------+
-| With the UI for entering a name and | We will store the message (with the username and text) in a |
-| a message, what shall we do next?   | message repository.                                         |
-+-------------------------------------+-------------------------------------------------------------+
-| Great! And...                       | First we write the test:                                    |
-|                                     |                                                             |
-|                                     | .. code:: js                                                |
-|                                     |                                                             |
-+-------------------------------------+-------------------------------------------------------------+
++-------------------------------------+----------------------------------------------------------------------+
+| With the UI for entering a name and | We will store the message (with the username and text) in a          |
+| a message, what shall we do next?   | message repository.                                                  |
++-------------------------------------+----------------------------------------------------------------------+
+| Great! And...                       | First we write the test:                                             |
+|                                     |                                                                      |
+|                                     | ``src/app/chatroom/chatroom.test.js``                                |
+|                                     |                                                                      |
+|                                     | .. code:: js                                                         |
+|                                     |                                                                      |
+|                                     | describe('chatroomController', function () {                         |
+|                                     |  var scope, controller, mockMessageRepository;                       |
+|                                     |                                                                      |
+|                                     |  beforeEach(function () {                                            |
+|                                     |    module("app.chatroom");                                           |
+|                                     |                                                                      |
+|                                     |    inject(function ($rootScope, $controller, MessageRepository) {    |
+|                                     |      scope = $rootScope.$new();                                      |
+|                                     |      mockMessageRepository = sinon.mock(MessageRepository);          |
+|                                     |      controller = $controller("ChatroomCtrl", { $scope: scope });    |
+|                                     |    });                                                               |
+|                                     |  });                                                                 |
+|                                     |                                                                      |
+|                                     |  describe('when a message is published it', function () {            |
+|                                     |                                                                      |
+|                                     |    it ('posts to MessageRepository', function () {                   |
+|                                     |      message = {                                                     |
+|                                     |        'username': 'RedQueen',                                       |
+|                                     |        'text': 'Off with her head!'                                  |
+|                                     |      };                                                              |
+|                                     |      mockMessageRepository.expects("post").calledWith(message);      |
+|                                     |      scope.publish();                                                |
+|                                     |    });                                                               |
+|                                     |                                                                      |
+|                                     |  });                                                                 |
+|                                     |                                                                      |
+|                                     | });                                                                  |
++-------------------------------------+----------------------------------------------------------------------+
+| I am getting an error when I run    | Yes, and that error is telling you ``post`` on ``MessageRepository`` |
+| this test.                          |                                                                      |
+|                                     | .. code:: js                                                         |
+|                                     |                                                                      |
+|                                     | ``src/app/chatroom/chatroom.test.js``                                |
+|                                     |                                                                      |
+|                                     |                                                                      |
++-------------------------------------+----------------------------------------------------------------------+
 
 
 
