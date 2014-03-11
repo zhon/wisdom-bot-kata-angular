@@ -20,14 +20,14 @@
             <button type="button" class="navbar-toggle" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
               <span class="fa fa-bars fa-lg"></span>
             </button>
-            <a class="navbar-brand" href="#">Wisdom</a>
+            <a class="navbar-brand" href="#">Chat</a>
           </div>
           <div class="navbar-collapse collapse" ng-class="!navCollapsed && 'in'">
             <ul class="nav navbar-nav">
-              <li ui-route="/home" ng-class="{active:$uiRoute}">
-                <a href="#/home">
-                  <i class="fa fa-home"></i>
-                  Home
+              <li ui-route="/chatroom" ng-class="{active:$uiRoute}">
+                <a href="#/chatroom">
+                  <i class="fa fa-comments"></i>
+                  Chatroom
                 </a>
               </li>
               <li ui-route="/about" ng-class="{active:$uiRoute}">

@@ -1,13 +1,13 @@
 angular.module( 'app', [
   'templates-app',
   'templates-common',
-  'app.home',
+  'app.chatroom',
   'app.about',
   'ui.bootstrap',
 ])
 
 .config( function myAppConfig ( $stateProvider, $urlRouterProvider ) {
-  $urlRouterProvider.otherwise( '/home' );
+  $urlRouterProvider.otherwise( '/chatroom' );
 })
 
 .run( function run ( ) {

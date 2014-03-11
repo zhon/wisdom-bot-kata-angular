@@ -30,7 +30,7 @@ The rest locally:
     npm install
     bower install
 
-You will be editing ``src/app/home/``
+You will be editing ``src/app/chatroom/``
 
 To run the tests and the build
 
@@ -68,7 +68,7 @@ Starting
 +-------------------------------------+---------------------------------------------------------------+
 | What is the test for *Hello World*? | Check the webpage ``build/index.html`` for "Hello".           |
 +-------------------------------------+---------------------------------------------------------------+
-| It is time to write *Hello World*.  | In ``src/app/home/home.tpl.html`` I write                     |
+| It is time to write *Hello World*.  | In ``src/app/chatroom/chatroom.tpl.html`` I write             |
 |                                     |                                                               |
 |                                     | .. code:: html                                                |
 |                                     |                                                               |
@@ -77,18 +77,18 @@ Starting
 +-------------------------------------+---------------------------------------------------------------+
 | Should't "World" be a variable?     | Sure! I can do that with simple scope binding:                |
 |                                     |                                                               |
-|                                     | ``src/app/home/home.tpl.html``                                |
+|                                     | ``src/app/chatroom/chatroom.tpl.html``                        |
 |                                     |                                                               |
 |                                     | .. code:: html                                                |
 |                                     |                                                               |
 |                                     |   Hello {{user}}!                                             |
 |                                     |                                                               |
 |                                     |                                                               |
-|                                     | ``src/app/home/home.js``                                      |
+|                                     | ``src/app/chatroom/chatroom.js``                              |
 |                                     |                                                               |
 |                                     | .. code:: js                                                  |
 |                                     |                                                               |
-|                                     |   .controller( 'HomeCtrl', function ( $scope ) {              |
+|                                     |   .controller( 'ChatroomCtrl', function ( $scope ) {          |
 |                                     |     $scope.user = 'World';                                    |
 |                                     |   })                                                          |
 |                                     |                                                               |
@@ -98,7 +98,7 @@ Starting
 +-------------------------------------+---------------------------------------------------------------+
 | How are we going to get the user?   | The user will be entered in a form                            |
 |                                     |                                                               |
-|                                     | ``src/app/home/home.tpl.html``                                |
+|                                     | ``src/app/chatroom/chatroom.tpl.html``                        |
 |                                     |                                                               |
 |                                     | .. code:: html                                                |
 |                                     |                                                               |
