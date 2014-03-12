@@ -43,12 +43,6 @@ your browser.
 
 For more information take a look at the `seed project`_
 
-Finish your **setup** by calling
-
-.. code:: bash
-
-    git checkout setup
-
 Introduction
 ------------
 
