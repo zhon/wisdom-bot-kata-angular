@@ -226,15 +226,23 @@ Test: Message is Saved - Failing
 Test: Message is Saved - Passing
 --------------------------------
 
-+-------------------------------------+----------------------------------+
-| I am looking forward to seeing your | No problem!                      |
-|                                     |                                  |
-|                                     | ``src/app/chatroom/chatroom.js`` |
-|                                     |                                  |
-|                                     | .. code:: js                     |
-|                                     |                                  |
-| code passing and checked in.        |                                  |
-+-------------------------------------+----------------------------------+
+ +------------------------------------+----------------------------------------------+
+ | I look forward to seeing your code | No problem!  I will just add one line to the |
+ |  passing and checked in.           | ``controller``.                              |
+ |                                    |                                              |
+ |                                    | ``src/app/chatroom/chatroom.js``             |
+ |                                    |                                              |
+ |                                    | .. code:: js                                 |
+ |                                    |                                              |
+ |                                    |     $scope.publish = function () {           |
+ |                                    |       messageRepository.post(message);       |
+ |                                    |     }                                        |
+ +------------------------------------+----------------------------------------------+
+
+ +------------------------------------+----------------------------------------------+
+ |                                    |                                              |
+ +------------------------------------+----------------------------------------------+
+
 
 ----
 
