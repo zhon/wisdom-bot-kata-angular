@@ -263,8 +263,8 @@ Test: Message is Saved - Failing
 Test: Message is Saved - Passing
 --------------------------------
 +------------------------------------+--------------------------------------------------------------------+
-| I look forward to seeing your code | No problem!  I will just add one line to the  ``controller``.      |
-|  passing and checked in.           |                                                                    |
+| Hmm.. I look forward to seeing     | No problem!  I will just add one line to the  ``controller``.      |
+| your code passing and checked in.  |                                                                    |
 |                                    | ``src/app/chatroom/chatroom.js``                                   |
 |                                    |                                                                    |
 |                                    | .. code:: js                                                       |
@@ -297,10 +297,9 @@ Test: Message is Saved - Passing
 |                                    |                                                                    |
 |                                    |    <button type="submit" ng-click="publish()">Send</button>        |
 +------------------------------------+--------------------------------------------------------------------+
-| Now what do you see.               | Both my manual and my automated tests pass.                        |
-|                                    |                                                                    |
+| Now what do you see?               | Both my manual and my automated test passing.                      |
 +------------------------------------+--------------------------------------------------------------------+
-| It is time to check in a grab a    | Mmm.... Snack.                                                     |
+| It is time to check in aand grab a | Mmm.... Snack!                                                     |
 | snack.                             |                                                                    |
 +------------------------------------+--------------------------------------------------------------------+
 
