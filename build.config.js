@@ -48,6 +48,7 @@ module.exports = {
       'vendor/sinon/lib/sinon/assert.js',
       'vendor/sinon/lib/sinon/match.js',
       'vendor/sinon/lib/sinon/sandbox.js',
+	  'vendor/sinon/lib/sinon/behavior.js',
     ]
   },
 
