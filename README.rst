@@ -43,106 +43,107 @@ your browser.
 
 For more information take a look at the `seed project`_
 
+
 Introduction
 ------------
 
-+---------------------------------------------+----------------------------------------+
-| I hear you want to try Mockist style TDD.   | I do! I do!                            |
-+---------------------------------------------+----------------------------------------+
-| What do you want to build?                  | A wisdom sharing bot in AngularJS.     |
-+---------------------------------------------+----------------------------------------+
-| We start by writing an acceptance test.     | Yes and for now they will be manual.   |
-+---------------------------------------------+----------------------------------------+
-| Why not automate it?                        | I will, just not in this Kata.         |
-+---------------------------------------------+----------------------------------------+
++-------------------------------------------+---------------------------------------------+
+| I hear you want to try Mockist style TDD. | I do! I do!                                 |
++-------------------------------------------+---------------------------------------------+
+| What do you want to build?                | A chat room with a wisdom bot in AngularJS. |
++-------------------------------------------+---------------------------------------------+
+| We start by writing an acceptance test.   | Yes and for now they will be manual.        |
++-------------------------------------------+---------------------------------------------+
+| Why not automate it?                      | I will, just not in this Kata.              |
++-------------------------------------------+---------------------------------------------+
 
 Starting
 --------
 
-+-------------------------------------+---------------------------------------------------------------+
-| What is the test for *Hello World*? | Check the webpage ``build/index.html`` for "Hello".           |
-+-------------------------------------+---------------------------------------------------------------+
-| It is time to write *Hello World*.  | In ``src/app/chatroom/chatroom.tpl.html`` I write             |
-|                                     |                                                               |
-|                                     | .. code:: html                                                |
-|                                     |                                                               |
-|                                     |     Hello World!                                              |
-|                                     |                                                               |
-+-------------------------------------+---------------------------------------------------------------+
-| Should't "World" be a variable?     | Sure! I can do that with simple scope binding:                |
-|                                     |                                                               |
-|                                     | ``src/app/chatroom/chatroom.tpl.html``                        |
-|                                     |                                                               |
-|                                     | .. code:: html                                                |
-|                                     |                                                               |
-|                                     |   Hello {{user}}!                                             |
-|                                     |                                                               |
-|                                     |                                                               |
-|                                     | ``src/app/chatroom/chatroom.js``                              |
-|                                     |                                                               |
-|                                     | .. code:: js                                                  |
-|                                     |                                                               |
-|                                     |   .controller( 'ChatroomCtrl', function ( $scope ) {          |
-|                                     |     $scope.user = 'World';                                    |
-|                                     |   })                                                          |
-|                                     |                                                               |
-+-------------------------------------+---------------------------------------------------------------+
-| You didn't write a test and this is | I don't write tests for simple scope bindings. They           |
-| a TDD kata.                         | couldn't possibly break.                                      |
-+-------------------------------------+---------------------------------------------------------------+
-| How are we going to get the user?   | The user will be entered in a form                            |
-|                                     |                                                               |
-|                                     | ``src/app/chatroom/chatroom.tpl.html``                        |
-|                                     |                                                               |
-|                                     | .. code:: html                                                |
-|                                     |                                                               |
-|                                     |     <form>                                                    |
-|                                     |       <label>Name:</label>                                    |
-|                                     |       <input ng-model="username" />                           |
-|                                     |     </form>                                                   |
-|                                     |     <hr/>                                                     |
-+-------------------------------------+---------------------------------------------------------------+
-| We need to input our message.       | We will just **change** the form a little to get both the     |
-|                                     | username and message.                                         |
-|                                     |                                                               |
-|                                     | ``src/app/chatroom/chatroom.tpl.html``                        |
-|                                     |                                                               |
-|                                     | .. code:: html                                                |
-|                                     |                                                               |
-|                                     |     <form>                                                    |
-|                                     |       <label>Name:</label>                                    |
-|                                     |       <input ng-model="message.username" />                   |
-|                                     |       <br />                                                  |
-|                                     |       <label>Message:</label>                                 |
-|                                     |       <input ng-model="message.text" />                       |
-|                                     |     </form>                                                   |
-|                                     |     <hr/>                                                     |
-|                                     |                                                               |
-|                                     | And to see it we will **replace** ``Hello {{username}}`` with |
-|                                     |                                                               |
-|                                     | ``src/app/chatroom/chatroom.tpl.html``                        |
-|                                     |                                                               |
-|                                     | .. code:: html                                                |
-|                                     |                                                               |
-|                                     |  <div class='chatbox'>                                        |
-|                                     |    <ul>                                                       |
-|                                     |     <li>                                                      |
-|                                     |      <span class='username'>                                  |
-|                                     |        {{message.username}}                                   |
-|                                     |      </span>                                                  |
-|                                     |      <span class='message'>                                   |
-|                                     |          {{message.text}}                                     |
-|                                     |        </span>                                                |
-|                                     |      </li>                                                    |
-|                                     |    </ul>                                                      |
-|                                     |  </div>                                                       |
-+-------------------------------------+---------------------------------------------------------------+
++-------------------------------------+----------------------------------------------------------------+
+| What is the test for *Hello World*? | Manually by checking webpage ``build/index.html`` for "Hello". |
++-------------------------------------+----------------------------------------------------------------+
+| How would you write *Hello World*.  | In ``src/app/chatroom/chatroom.tpl.html`` I write              |
+|                                     |                                                                |
+|                                     | .. code:: html                                                 |
+|                                     |                                                                |
+|                                     |     Hello World!                                               |
+|                                     |                                                                |
++-------------------------------------+----------------------------------------------------------------+
+| Should't "World" be a variable?     | Sure! I can do that with simple scope binding:                 |
+|                                     |                                                                |
+|                                     | ``src/app/chatroom/chatroom.tpl.html``                         |
+|                                     |                                                                |
+|                                     | .. code:: html                                                 |
+|                                     |                                                                |
+|                                     |   Hello {{user}}!                                              |
+|                                     |                                                                |
+|                                     |                                                                |
+|                                     | ``src/app/chatroom/chatroom.js``                               |
+|                                     |                                                                |
+|                                     | .. code:: js                                                   |
+|                                     |                                                                |
+|                                     |   .controller( 'ChatroomCtrl', function ( $scope ) {           |
+|                                     |     $scope.user = 'World';                                     |
+|                                     |   })                                                           |
+|                                     |                                                                |
++-------------------------------------+----------------------------------------------------------------+
+| You didn't write a test and this is | I don't write tests for simple scope bindings. They            |
+| a TDD kata.                         | couldn't possibly break.                                       |
++-------------------------------------+----------------------------------------------------------------+
+| How are we going to get the user?   | The user will be entered in a form                             |
+|                                     |                                                                |
+|                                     | ``src/app/chatroom/chatroom.tpl.html``                         |
+|                                     |                                                                |
+|                                     | .. code:: html                                                 |
+|                                     |                                                                |
+|                                     |     <form>                                                     |
+|                                     |       <label>Name:</label>                                     |
+|                                     |       <input ng-model="user" />                                |
+|                                     |     </form>                                                    |
+|                                     |     <hr/>                                                      |
++-------------------------------------+----------------------------------------------------------------+
+| We need to input our message.       | We will just **change** the form a little to get both the      |
+|                                     | user and message.                                              |
+|                                     |                                                                |
+|                                     | ``src/app/chatroom/chatroom.tpl.html``                         |
+|                                     |                                                                |
+|                                     | .. code:: html                                                 |
+|                                     |                                                                |
+|                                     |     <form>                                                     |
+|                                     |       <label>Name:</label>                                     |
+|                                     |       <input ng-model="message.user" />                        |
+|                                     |       <br />                                                   |
+|                                     |       <label>Message:</label>                                  |
+|                                     |       <input ng-model="message.text" />                        |
+|                                     |     </form>                                                    |
+|                                     |     <hr/>                                                      |
+|                                     |                                                                |
+|                                     | And to see it we will **replace** ``Hello {{user}}`` with      |
+|                                     |                                                                |
+|                                     | ``src/app/chatroom/chatroom.tpl.html``                         |
+|                                     |                                                                |
+|                                     | .. code:: html                                                 |
+|                                     |                                                                |
+|                                     |  <div class='chatbox'>                                         |
+|                                     |    <ul>                                                        |
+|                                     |     <li>                                                       |
+|                                     |      <span class='user'>                                       |
+|                                     |        {{message.user}}                                        |
+|                                     |      </span>                                                   |
+|                                     |      <span class='message'>                                    |
+|                                     |          {{message.text}}                                      |
+|                                     |        </span>                                                 |
+|                                     |      </li>                                                     |
+|                                     |    </ul>                                                       |
+|                                     |  </div>                                                        |
++-------------------------------------+----------------------------------------------------------------+
 
 Test: Message is Saved
 ----------------------
 
 +-------------------------------------+----------------------------------------------------------------------+
-| With the UI for entering a name and | We will store the message (with the username and text) in a          |
+| With the UI for entering a name and | We will store the message (with the user and text) in a              |
 | a message, what shall we do next?   | message repository.                                                  |
 +-------------------------------------+----------------------------------------------------------------------+
 | Great! And...                       | First we write the test:                                             |
@@ -170,7 +171,7 @@ Test: Message is Saved
 |                                     |                                                                      |
 |                                     |       it ('posts to MessageRepository', function () {                |
 |                                     |         message = {                                                  |
-|                                     |           'username': 'RedQueen',                                    |
+|                                     |           'user': 'RedQueen',                                        |
 |                                     |           'text': 'Off with her head!'                               |
 |                                     |         };                                                           |
 |                                     |         scope.publish();                                             |
