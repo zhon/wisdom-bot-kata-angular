@@ -145,8 +145,8 @@ Test: Message is Saved
 | With the UI for entering a name and | We will store the message (user and text) in a message               |
 | a message, what shall we do next?   | repository.                                                          |
 +-------------------------------------+----------------------------------------------------------------------+
-| Great! And...                       | First I write the skeleton of an angular the It starts with a        |
-|                                     | ``describe`` **something** in this case a ``controller``.            |
+| Great! And...                       | First I write the skeleton of an angular test. It starts with a      |
+|                                     | ``describe`` **something** (in this case a ``controller``).          |
 |                                     |                                                                      |
 |                                     | For ``controller`` tests we usually need ``scope``.                  |
 |                                     |                                                                      |
@@ -184,7 +184,7 @@ Test: Message is Saved
 | After template, then?               | I fill in the test. It requires a mock. I will set that up in the    |
 |                                     | ``beforeEach`` as it will be used for mutiple tests.                 |
 |                                     |                                                                      |
-|                                     | The test is simple, assert when ``scope.publish`` is called, we post |
+|                                     | The test is simple: assert when ``scope.publish`` is called, we post |
 |                                     | the message to the ``MessageRepository``.                            |
 |                                     |                                                                      |
 |                                     | This is what the whole file looks like:                              |
@@ -224,8 +224,10 @@ Test: Message is Saved
 |                                     |     });                                                              |
 |                                     |   });                                                                |
 +-------------------------------------+----------------------------------------------------------------------+
-| I am getting an error when I run    | Yes, and that error is telling you to add method ``post`` to         |
+| I am getting an error when I run    | Yes, and that error is telling me to add method ``post`` to          |
 | your test.                          | ``MessageRepository``                                                |
+|                                     |                                                                      |
+|                                     | *Notice I put the ``.service`` before the bottom ``;``               |
 |                                     |                                                                      |
 |                                     | ``src/app/chatroom/chatroom.js``                                     |
 |                                     |                                                                      |
@@ -238,7 +240,7 @@ Test: Message is Saved
 |                                     |     }                                                                |
 |                                     |   })                                                                 |
 +-------------------------------------+----------------------------------------------------------------------+
-| Now when you run the test what do   | An Error. It is telling me I need ``publish`` on ``ChatroomCtrl``    |
+| Now when you run the test, what do  | An Error. It is telling me I need ``publish`` on ``ChatroomCtrl``    |
 | you see?                            | ``$scope``                                                           |
 |                                     |                                                                      |
 |                                     | ``src/app/chatroom/chatroom.js``                                     |
