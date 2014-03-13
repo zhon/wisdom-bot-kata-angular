@@ -143,17 +143,59 @@ Test: Message is Saved
 ----------------------
 
 +-------------------------------------+----------------------------------------------------------------------+
-| With the UI for entering a name and | We will store the message (with the user and text) in a              |
-| a message, what shall we do next?   | message repository.                                                  |
+| With the UI for entering a name and | We will store the message (user and text) in a message               |
+| a message, what shall we do next?   | repository.                                                          |
 +-------------------------------------+----------------------------------------------------------------------+
-| Great! And...                       | First we write the test:                                             |
+| Great! And...                       | First I write the skeleton of an angular the It starts with a        |
+|                                     | ``describe`` **something** in this case a ``controller``.            |
+|                                     |                                                                      |
+|                                     | For ``controller`` tests we usually need ``scope``.                  |
+|                                     |                                                                      |
+|                                     | This is followed by a ``beforeEach`` which setup up the test for     |
+|                                     | the ``module`` (``app.chatroom``) and injects the objects we need    |
+|                                     | (``$rootScope`` and ``$controller``).                                |
+|                                     |                                                                      |
+|                                     | Next we have another ``describe`` with an ``it`` inside (the         |
+|                                     | actual test).                                                        |
 |                                     |                                                                      |
 |                                     | ``src/app/chatroom/chatroom.test.js``                                |
 |                                     |                                                                      |
 |                                     | .. code:: js                                                         |
 |                                     |                                                                      |
 |                                     |   describe('chatroomController', function () {                       |
-|                                     |     var scope, controller, mockMessageRepository;                    |
+|                                     |     var scope  ;                                                     |
+|                                     |                                                                      |
+|                                     |     beforeEach(function () {                                         |
+|                                     |       module("app.chatroom");                                        |
+|                                     |                                                                      |
+|                                     |       inject(function ( $rootScope,                                  |
+|                                     |                         $controller,                                 |
+|                                     |                       ) {                                            |
+|                                     |       });                                                            |
+|                                     |     });                                                              |
+|                                     |                                                                      |
+|                                     |     describe('when a message is published it', function () {         |
+|                                     |                                                                      |
+|                                     |       it ('posts to MessageRepository', function () {                |
+|                                     |       });                                                            |
+|                                     |                                                                      |
+|                                     |     });                                                              |
+|                                     |   });                                                                |
++-------------------------------------+----------------------------------------------------------------------+
+| After template, then?               | I fill in the test. It requires a mock. I will set that up in the    |
+|                                     | ``beforeEach`` as it will be used for mutiple tests.                 |
+|                                     |                                                                      |
+|                                     | The test is simple, assert when ``scope.publish`` is called, we post |
+|                                     | the message to the ``MessageRepository``.                            |
+|                                     |                                                                      |
+|                                     | This is what the whole file looks like:                              |
+|                                     |                                                                      |
+|                                     | ``src/app/chatroom/chatroom.test.js``                                |
+|                                     |                                                                      |
+|                                     | .. code:: js                                                         |
+|                                     |                                                                      |
+|                                     |   describe('chatroomController', function () {                       |
+|                                     |     var scope, mockMessageRepository;                                |
 |                                     |                                                                      |
 |                                     |     beforeEach(function () {                                         |
 |                                     |       module("app.chatroom");                                        |
@@ -163,7 +205,7 @@ Test: Message is Saved
 |                                     |                         MessageRepository) {                         |
 |                                     |         scope = $rootScope.$new();                                   |
 |                                     |         mockMessageRepository = sinon.stub(MessageRepository);       |
-|                                     |         controller = $controller("ChatroomCtrl", { $scope: scope }); |
+|                                     |         $controller("ChatroomCtrl", { $scope: scope });              |
 |                                     |       });                                                            |
 |                                     |     });                                                              |
 |                                     |                                                                      |
@@ -181,7 +223,6 @@ Test: Message is Saved
 |                                     |       });                                                            |
 |                                     |                                                                      |
 |                                     |     });                                                              |
-|                                     |                                                                      |
 |                                     |   });                                                                |
 +-------------------------------------+----------------------------------------------------------------------+
 | I am getting an error when I run    | Yes, and that error is telling you to add method ``post`` to         |
