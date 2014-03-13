@@ -8,8 +8,7 @@ Setup
 
 You will need `node/npm`_ and `git`_ installed.
 
-You will also need `Chrome`_ (`Firefox`_ will work with a bit of
-configuration).
+You will also need `Chrome`_ (`Firefox`_ will work with a bit of configuration).
 
 .. code:: bash
 
@@ -17,13 +16,13 @@ configuration).
 
     cd wisdom-bot-kata-angular/
 
-`Grunt`_, `karma`_ and `bower`_ should be installed globally:
+`Grunt`_, `karma`_ and `bower`_ will be installed globally with the ``-g`` flag:
 
 .. code:: bash
 
     npm -g install grunt-cli karma bower
 
-The rest locally:
+The rest will be installed in the current directory by calling:
 
 .. code:: bash
 
