@@ -170,13 +170,13 @@ Test: Message is Saved
 |                                     |     describe('when a message is published it', function () {         |
 |                                     |                                                                      |
 |                                     |       it ('posts to MessageRepository', function () {                |
-|                                     |         message = {                                                  |
+|                                     |         scope.message = {                                            |
 |                                     |           'user': 'RedQueen',                                        |
 |                                     |           'text': 'Off with her head!'                               |
 |                                     |         };                                                           |
 |                                     |         scope.publish();                                             |
 |                                     |         expect(                                                      |
-|                                     |           mockMessageRepository.post.calledWith(message)             |
+|                                     |           mockMessageRepository.post.calledWith(scope.message)       |
 |                                     |         ).toBeTruthy();                                              |
 |                                     |       });                                                            |
 |                                     |                                                                      |
