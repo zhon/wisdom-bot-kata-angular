@@ -60,7 +60,7 @@ Starting
 --------
 
 +-------------------------------------+----------------------------------------------------------------+
-| What is the test for *Hello World*? | Manually by checking webpage ``build/index.html`` for "Hello". |
+| How do you *test* *Hello World*?    | Manually by checking webpage ``build/index.html`` for "Hello". |
 +-------------------------------------+----------------------------------------------------------------+
 | How would you write *Hello World*.  | In ``src/app/chatroom/chatroom.tpl.html`` I write              |
 |                                     |                                                                |
@@ -114,7 +114,7 @@ Starting
 |                                     |       <input ng-model="message.user" />                        |
 |                                     |       <br />                                                   |
 |                                     |       <label>Message:</label>                                  |
-|                                     |       <input ng-model="message.text" />                        |
+|                                     |       <button type="submit">Send</button                       |
 |                                     |     </form>                                                    |
 |                                     |     <hr/>                                                      |
 |                                     |                                                                |
@@ -262,23 +262,48 @@ Test: Message is Saved - Failing
 
 Test: Message is Saved - Passing
 --------------------------------
++------------------------------------+--------------------------------------------------------------------+
+| I look forward to seeing your code | No problem!  I will just add one line to the  ``controller``.      |
+|  passing and checked in.           |                                                                    |
+|                                    | ``src/app/chatroom/chatroom.js``                                   |
+|                                    |                                                                    |
+|                                    | .. code:: js                                                       |
+|                                    |                                                                    |
+|                                    |     $scope.publish = function () {                                 |
+|                                    |       messageRepository.post(message);                             |
+|                                    |     }                                                              |
++------------------------------------+--------------------------------------------------------------------+
+| Are you ready to check in?         | No.                                                                |
++------------------------------------+--------------------------------------------------------------------+
+| Why not?                           | Because I still need to acceptance test it.                        |
++------------------------------------+--------------------------------------------------------------------+
+| How will you do that?              | I will load the web page (``build.index.html``) in the browser and |
+|                                    | see that message is saved.                                         |
++------------------------------------+--------------------------------------------------------------------+
+| How? The message is not being      | I will add a ``console.log`` message inside of                     |
+| stored.                            | ``MessageRepository.post``.                                        |
+|                                    |                                                                    |
+|                                    | ``src/app/chatroom/chatroom.js``                                   |
+|                                    |                                                                    |
+|                                    | .. code:: js                                                       |
+|                                    |       post: function () {                                          |
+|                                    |         console.log(message.user + ' ' + message.text);            |
+|                                    |       }                                                            |
++------------------------------------+--------------------------------------------------------------------+
+| What happeded when you ran it?     | Nothing. It isn't hooked up. I am hooking it up now by adding      |
+|                                    | ``ng-click="publish()"`` to the form button.                       |
+|                                    |                                                                    |
+|                                    | ``src/app/chatroom/chatroom.tpl.html``                             |
+|                                    |                                                                    |
+|                                    |    <button type="submit" ng-click="publish()">Send</button>        |
++------------------------------------+--------------------------------------------------------------------+
+| Now what do you see.               | Both my manual and my automated tests pass.                        |
+|                                    |                                                                    |
++------------------------------------+--------------------------------------------------------------------+
+| It is time to check in a grab a    | Mmm.... Snack.                                                     |
+| snack.                             |                                                                    |
++------------------------------------+--------------------------------------------------------------------+
 
- +------------------------------------+----------------------------------------------+
- | I look forward to seeing your code | No problem!  I will just add one line to the |
- |  passing and checked in.           | ``controller``.                              |
- |                                    |                                              |
- |                                    | ``src/app/chatroom/chatroom.js``             |
- |                                    |                                              |
- |                                    | .. code:: js                                 |
- |                                    |                                              |
- |                                    |     $scope.publish = function () {           |
- |                                    |       messageRepository.post(message);       |
- |                                    |     }                                        |
- +------------------------------------+----------------------------------------------+
-
- +------------------------------------+----------------------------------------------+
- |                                    |                                              |
- +------------------------------------+----------------------------------------------+
 
 
 ----
