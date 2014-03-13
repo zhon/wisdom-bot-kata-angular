@@ -8,7 +8,6 @@
     "angular-bootstrap": "~0.10.0",
     "angular-ui-router": "0.2.7",
     "angular-ui-utils": "~0.1.0",
-    "sinon": "~1.9",
     "underscore": "~1.6"
   },
   "dependencies": {},
